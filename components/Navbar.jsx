@@ -10,7 +10,12 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">DOMTIS</Link>
+        <Link href="/">
+          <img
+            src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
+            alt=""
+          />
+        </Link>
       </p>
       <button
         className="cart-icon"

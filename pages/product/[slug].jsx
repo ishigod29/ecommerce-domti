@@ -8,6 +8,7 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import { useStateContext } from "../../context/StateContext";
+import { Footer } from "../../components";
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -23,7 +24,7 @@ const ProductDetails = ({ product, products }) => {
   return (
     <div>
       <div className="product-detail-container">
-        <div>
+        <div className="image-detail-container">
           <div className="image-container">
             <img
               className="product-detail-image"
@@ -58,13 +59,11 @@ const ProductDetails = ({ product, products }) => {
               <AiFillStar />
               <AiOutlineStar />
             </div>
-            <p>(20)</p>
+            <p>20 Reviews</p>
           </div>
-          <h4>Details: </h4>
-          <p>{details}</p>
+          <p className="details">{details}</p>
           <p className="price">${price}</p>
           <div className="quantity">
-            <h3>Quantity:</h3>
             <p className="quantity-desc">
               <span className="minus" onClick={decQty}>
                 <AiOutlineMinus />
@@ -101,6 +100,7 @@ const ProductDetails = ({ product, products }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

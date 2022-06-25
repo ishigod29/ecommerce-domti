@@ -25,6 +25,13 @@ const FooterBanner = ({
           <h3>{largeText2}</h3>
           <p>{saleTime}</p>
         </div>
+        <img
+          width={500}
+          height={500}
+          className="footer-banner-image"
+          src={urlFor(image)}
+          alt=""
+        />
         <div className="right">
           <p>{smallText}</p>
           <h3>{midText}</h3>
@@ -33,14 +40,10 @@ const FooterBanner = ({
             <button>{buttonText}</button>
           </Link>
         </div>
-
-        <img
-          width={500}
-          height={500}
-          className="footer-banner-image"
-          src={urlFor(image)}
-          alt=""
-        />
+      </div>
+      <div className="footer-container">
+        <p>&copy; 2022 Grabbel All rights reserved</p>
+        <p className="icons"></p>
       </div>
     </div>
   );
